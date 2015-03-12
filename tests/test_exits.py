@@ -8,7 +8,7 @@ from fuzzy import rooms
 class ExitTest(TestCase):
     def setUp(self):
         self.description = "This is an exit"
-        self.room = rooms.Room("Somewhere else")
+        self.room = rooms.Room("room1", "Somewhere else")
         self.exit = exits.Exit(self.room, self.description)
 
     def test_it_should_initialize_with_description(self):

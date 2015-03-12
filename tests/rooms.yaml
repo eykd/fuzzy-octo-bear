@@ -1,0 +1,17 @@
+start:
+  description: Room 1
+  exits:
+    room2: North to room 2
+    room3: East to room 3
+
+room2:
+  description: Room 2
+  exits:
+    start: South to room 1
+    room3: East to room 3
+
+room3:
+  description: Room 3
+  exits:
+    start: West to room 1
+    room2: West to room 2

@@ -4,12 +4,11 @@ from ensure import ensure
 from fuzzy import rooms, exits
 
 
-
 class RoomTest(TestCase):
     def setUp(self):
         self.description = "This is a room"
-        self.room = rooms.Room(self.description)
-        self.room2 = rooms.Room(self.description * 2)
+        self.room = rooms.Room('room1', self.description)
+        self.room2 = rooms.Room('room2', self.description * 2)
 
     def test_it_should_initialize_with_description(self):
         ensure(self.room.description).equals(self.description)

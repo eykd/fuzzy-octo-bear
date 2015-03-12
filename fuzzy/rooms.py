@@ -1,7 +1,8 @@
 
 
 class Room(object):
-    def __init__(self, description):
+    def __init__(self, room_id, description):
+        self.id = room_id
         self.description = description
         self.exits = []
 

@@ -9,9 +9,9 @@ from fuzzy.exits import Exit
 
 class ParserTests(TestCase):
     def setUp(self):
-        self.room1 = Room("Room 1")
-        self.room2 = Room("Room 2")
-        self.room3 = Room("Room 3")
+        self.room1 = Room("room1", "Room 1")
+        self.room2 = Room("room2", "Room 2")
+        self.room3 = Room("room3", "Room 3")
 
         self.exit1_2 = Exit(self.room2, "North to room 2")
         self.room1.add_exit(self.exit1_2)
@@ -38,7 +38,14 @@ class ParserTests(TestCase):
         ensure(self.parser.parse).called_with('North to room 2').equals(('follow_exit', self.exit1_2))
         ensure(self.parser.parse).called_with('north').equals(('follow_exit', self.exit1_2))
         ensure(self.parser.parse).called_with('n').equals(('follow_exit', self.exit1_2))
+        ensure(self.parser.parse).called_with('2').equals(('follow_exit', self.exit1_2))
+        ensure(self.parser.parse).called_with('room 2').equals(('follow_exit', self.exit1_2))
 
         ensure(self.parser.parse).called_with('East to room 3').equals(('follow_exit', self.exit1_3))
         ensure(self.parser.parse).called_with('east').equals(('follow_exit', self.exit1_3))
         ensure(self.parser.parse).called_with('e').equals(('follow_exit', self.exit1_3))
+        ensure(self.parser.parse).called_with('3').equals(('follow_exit', self.exit1_3))
+        ensure(self.parser.parse).called_with('room 3').equals(('follow_exit', self.exit1_3))
+
+    def test_it_should_fail_gracefully_with_nonsensical_input(self):
+        ensure(self.parser.parse).called_with('fuzzy').equals(('invalid_input', None))
