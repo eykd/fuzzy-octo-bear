@@ -1,0 +1,41 @@
+ R  R  R  R  R  R  R  R  R  R  R  R  R  R  R  R  R  R  R  R
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  f  f  X  f  v  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ *  =  =  =  =  =  =  =  =  =  =  =  =  =  =  =  =  =  =  >  -> Mine
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+ W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  C
+
+
+C = Cliff
+W = Wilderness
+* = Burning wreckage / crater
+= = Road
+> = Exit to Mine
+f = forest
+R = River
+X = Crash site
+V = Cave
+F = Waterfall?
+
+
+Collecting wood
+Kill animals for food
+Gothering water from river (need container)
+Find boat? Ride boat down river? To Mine? To City?
+Rapids on the River
+River approach is sneaky thief approach
+Road approach is direct Chuck Norris approach

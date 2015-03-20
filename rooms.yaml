@@ -1,17 +1,64 @@
 start:
-  description: Room 1
+  description: Earth
   exits:
-    room2: North to room 2
-    room3: East to room 3
+    rocket: Enter the rocket ship
 
-room2:
-  description: Room 2
+rocket:
+  description: Your Spaceship
   exits:
-    start: South to room 1
-    room3: East to room 3
+    forest: The Forest
 
-room3:
-  description: Room 3
+forest:
+  description: The Forest
   exits:
-    start: West to room 1
-    room2: West to room 2
+    mine: Onward to the Mine
+
+  map:
+    enter: X
+    exits:
+      - ">": mine
+
+    grid: |
+       R  R  R  R  R  R  R  R  R  R  R  R  R  R  R  R  R  R  R  R
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  f  f  X  f  v  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       *  =  =  =  =  =  =  =  =  =  =  =  =  =  =  =  =  =  =  >
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
+       W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  C
+
+
+
+
+mine:
+  description: The Mine
+  exits:
+    city: Onward to the City
+
+city:
+  description: The City
+  exits:
+    citadel: Onward to the citadel
+
+
+citadel:
+  description: The Citadel
+  exits:
+    win: Win!
+
+win:
+  description: You win!
+  exits: {}
