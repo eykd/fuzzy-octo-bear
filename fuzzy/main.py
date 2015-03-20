@@ -12,11 +12,6 @@ def main():
 
     while True:
         print game.display_room(game.current_room)
-        print
-        print "Paths:"
-        for exit in game.current_room.exits:
-            print '  ' + exit.description
-        print
 
         input = raw_input('> ')
         command, arg = parser.parse(input)

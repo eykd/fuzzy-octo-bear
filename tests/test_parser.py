@@ -49,3 +49,6 @@ class ParserTests(TestCase):
 
     def test_it_should_fail_gracefully_with_nonsensical_input(self):
         ensure(self.parser.parse).called_with('fuzzy').equals(('invalid_input', None))
+
+    def test_it_should_quit_when_we_say_quit(self):
+        ensure(self.parser.parse).called_with('quit').equals(('quit', None))

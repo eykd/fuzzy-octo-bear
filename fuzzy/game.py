@@ -1,3 +1,5 @@
+import sys
+
 import yaml
 
 from .rooms import Room
@@ -10,7 +12,12 @@ class Game(object):
         self.current_room = start_room
 
     def display_room(self, room):
-        return str(room)
+        display = [str(room)]
+        if room.exits:
+            display.append('\n\nPaths:\n')
+            for exit in room.exits:
+                display.extend(('  ', str(exit), '\n'))
+        return ''.join(display)
 
     def get_start_room(self):
         return self.start_room
@@ -20,6 +27,9 @@ class Game(object):
 
     def invalid_input(self, _):
         return "I'm sorry, what?"
+
+    def quit(self, _):
+        sys.exit()
 
 
 def load_game_map(path):
