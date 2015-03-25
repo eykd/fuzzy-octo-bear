@@ -1,3 +1,4 @@
+import textwrap
 from unittest import TestCase
 from ensure import ensure
 
@@ -19,7 +20,15 @@ class GameTests(TestCase):
         ensure(self.game.start_room).is_(self.start_room)
 
     def test_it_should_display_a_room(self):
-        ensure(self.game.display_room).called_with(self.start_room).equals(self.start_room.description)
+        ensure(self.game.display_room).called_with(self.start_room).equals(
+            textwrap.dedent(
+                """\
+                Room 1
+
+                Paths:
+                  North to room 2
+                """)
+        )
 
     def test_it_should_initialize_with_location_as_start_room(self):
         ensure(self.game.current_room).equals(self.game.start_room)

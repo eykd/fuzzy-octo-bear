@@ -1,13 +1,12 @@
-
-
 class Parser(object):
     def __init__(self, game):
         self.game = game
 
     def parse(self, input):
         for exit in self.game.current_room.exits:
-            matches = self._match_on(exit.description, input)
-            if matches:
+            matches_desc = self._match_on(exit.description, input)
+            matches_alias = self._match_on(exit.aliases, input)
+            if matches_desc or matches_alias:
                 return ('follow_exit', exit)
 
         if self._match_on('quit', input):
@@ -21,4 +20,8 @@ class Parser(object):
     def _match_on(self, pattern, input):
         pattern = self._normalize(pattern)
         input = self._normalize(input)
-        return any(p.startswith(input) for p in pattern.split())
+        return (
+            input == pattern
+            or
+            any(input == p for p in pattern.split())
+        )
