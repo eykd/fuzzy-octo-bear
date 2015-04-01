@@ -3,7 +3,7 @@ from ensure import ensure
 
 from path import path
 
-from fuzzy.game import load_game_map
+from fuzzy.map import load_game_map
 from fuzzy.rooms import Room
 from fuzzy.exits import Exit
 

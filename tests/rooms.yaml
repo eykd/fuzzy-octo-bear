@@ -15,3 +15,17 @@ room3:
   exits:
     start: West to room 1
     room2: West to room 2
+
+
+other_rooms:
+  map:
+    grid: |
+      3 R
+      R R
+
+    key:
+      "R": -a_room
+      "3": =room3
+
+a_room:
+  description: A nondescript room

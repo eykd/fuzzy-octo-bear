@@ -1,11 +1,12 @@
 from .rooms import Room
 from .exits import Exit
-from .game import Game, load_game_map
+from .game import Game
 from .parsers import Parser
+from . import map
 
 
 def main():
-    start_room = load_game_map('./rooms.yaml')
+    start_room = map.load_game_map('./rooms.yaml')
 
     game = Game(start_room)
     parser = Parser(game)

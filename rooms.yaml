@@ -6,13 +6,9 @@ start:
 rocket:
   description: Your Spaceship
   exits:
-    forest: The Forest
+    crash_site: Crash and burn!
 
 forest:
-  description: The Forest
-  exits:
-    mine: Onward to the Mine
-
   map:
     enter: X
     exits:
@@ -40,11 +36,33 @@ forest:
        W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
        W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  C
 
+    key:
+      "X": =crash_site
+      ">": =exit_to_mine
+      "*": =burning_wreckage
+      "C": -cliffside
+      "W": -wilderness_edge
+      "=": -forest_road
+      "f": -forest
+      "R": -river
+      "V": -cave
 
+
+crash_site:
+  description: The burning wreckage of your ship
+
+
+exit_to_mine:
+  description: The mine lies ahead
+  exits:
+    mine: Onward to the Mine
 
 
 mine:
-  description: The Mine
+  description: |
+    The Mine
+
+    People have dug a big hole in the ground here.
   exits:
     city: Onward to the City
 
