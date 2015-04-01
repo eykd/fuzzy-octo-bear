@@ -64,14 +64,10 @@ class ParserTests(TestCase):
         ensure(self.parser.parse).called_with('2').equals(('follow_exit', self.exit1_2))
         ensure(self.parser.parse).called_with('spooky').equals(('follow_exit', self.exit1_2))
         ensure(self.parser.parse).called_with('s').equals(('invalid_input', None))
-        ensure(self.parser.parse).called_with('room 2').equals(('follow_exit', self.exit1_2))
-        ensure(self.parser.parse).called_with('North to room 2').equals(('follow_exit', self.exit1_2))
 
-        ensure(self.parser.parse).called_with('East to room 3').equals(('follow_exit', self.exit1_3))
         ensure(self.parser.parse).called_with('east').equals(('follow_exit', self.exit1_3))
         ensure(self.parser.parse).called_with('e').equals(('follow_exit', self.exit1_3))
         ensure(self.parser.parse).called_with('3').equals(('follow_exit', self.exit1_3))
-        ensure(self.parser.parse).called_with('room 3').equals(('follow_exit', self.exit1_3))
 
     def test_it_should_fail_gracefully_with_nonsensical_input(self):
         ensure(self.parser.parse).called_with('fuzzy').equals(('invalid_input', None))
