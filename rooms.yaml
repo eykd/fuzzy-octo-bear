@@ -36,7 +36,7 @@ forest:
        W  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  f  C
        W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  W  C
 
-    key:
+    legend:
       "X": =crash_site
       ">": =exit_to_mine
       "*": =burning_wreckage

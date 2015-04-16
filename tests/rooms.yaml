@@ -23,7 +23,7 @@ other_rooms:
       3 R
       R R
 
-    key:
+    legend:
       "R": -a_room
       "3": =room3
 
